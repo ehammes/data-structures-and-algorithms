@@ -43,8 +43,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 const addPurchases = (arr) => {
   // Solution code here...
   return arr.reduce((a,b) => {
-    return a.purchasePrice + b.purchasePrice,0;
-  });
+    return a.purchasePrice + b.purchasePrice;
+  }, 2);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,13 +116,22 @@ let starWarsData = [{
   gender: 'female'
 }];
 
+// const returnNames = (arr) => {
+//   // Solution code here...
+//   let names = arr.reduce((acc, val) => {
+//     acc.push(val.name);
+//   });
+//   return names;
+// };
+
 const returnNames = (arr) => {
   // Solution code here...
-  let names = arr.reduce((acc, val) => {
-    acc.push(val.name);
-  });
-  return names;
+  return arr.reduce((newArr, current) => {
+    newArr.push(current.name);
+    return newArr;
+  }, []);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,6 +143,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  return str.split('').reduce((accumulator, current) => {
+    return current + accumulator;
+  }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
