@@ -13,7 +13,9 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-
+  return people.map((a) => {
+    return (a.firstName + ` ` + a.lastName);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +27,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  return arr.reduce((a,b) => a+b,0);
+  return arr.reduce((a, b) => a + b, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,9 +44,9 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  return arr.reduce((a,b) => {
-    return a.purchasePrice + b.purchasePrice;
-  }, 2);
+  return arr.reduce((runningTotal, currentNumber) => {
+    return runningTotal + currentNumber.purchasePrice;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,6 +59,9 @@ Note: You may not use the array's built-in length property.
 
 function countNumberOfElements(arr) {
   // Solution code here...
+  return arr.reduce((total) => {
+    return total + 1;
+  }, 0);
 }
 
 /* ------------------------------------------------------------------------------------------------
