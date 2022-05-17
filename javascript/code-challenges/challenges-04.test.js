@@ -23,7 +23,7 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
-  let newArray=[];
+  let newArray = [];
   arr.forEach((str) => {
     newArray.push(callback(str));
   });
@@ -205,6 +205,17 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  const dayOfWeek = {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4,
+  };
+  arr.sort((a, b) => {
+    return dayOfWeek[a.dayOfWeek] - dayOfWeek[b.dayOfWeek];
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
