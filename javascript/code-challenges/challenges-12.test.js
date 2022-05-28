@@ -9,7 +9,7 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 const replaceZeros = (string) => {
   // Solution code here...
   let reg = /0/g;
-  return string.replaceAll(reg, 'zero');
+  return string.replace(reg, 'zero');
 };
 
 /* ------------------------------------------------------------------------------------------------
