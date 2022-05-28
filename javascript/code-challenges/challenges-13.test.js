@@ -8,7 +8,15 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
   // Solution code here...
-
+  let index = -1;
+  let longestIdx = 0;
+  arr.forEach((str, idx) => {
+    if (str.length > longestIdx) {
+      longestIdx = str.length;
+      index = idx;
+    }
+  });
+  return index;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,8 +60,12 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
-  console.log(arr);
-  return arr.map(num => num.join(' '));
+  return arr.map(num => {
+    let areaCode = num.substring(1, 4);
+    let middle = num.substring(6, 9);
+    let end = num.substring(10);
+    return areaCode + middle + end;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
