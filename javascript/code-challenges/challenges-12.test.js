@@ -53,7 +53,7 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
-  let reg = /^[A-Za-z]{1,}\d{1}/g;
+  let reg = /^[A-Za-z]+\d+/g;
   return reg.test(string);
 };
 
@@ -75,7 +75,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
-
+  let reg = /^[a-zA-Z0-9]+\.?[a-zA-Z0-0]+@[a-zA-Z09]+\.(com|net|org)$/;
+  return reg.test(email);
 
 };
 
@@ -102,8 +103,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
-  // let regex = /(s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g;
-  // return regex.test(phoneNumber);
+  let regex = /^(\(\d{3}\)|\d{3})[- ]?\d{3}[ -]?\d{4}$/;
+  return regex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
