@@ -30,7 +30,7 @@ const courseInfo = {
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  return Object.keys(courseInfo);
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,8 +43,12 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  let num = obj.keys(values => obj.true(values));
-  return num;
+  let num = Object.values(obj);
+  if (num.includes(value)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +72,14 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  // let array = Object.entries(obj => );
+  let array= [];
+  let keys = Object.keys(obj);
+  let values = Object.values(obj);
+  for (let i=0; i< 2; i++) {
+    let nums = `${keys[i]}: ${values[i]}`;
+    array.push(nums);
+  }
+  return array;
 };
 
 
@@ -146,7 +157,7 @@ const hasChildrenValues = (arr, character) => {
   let children = 0;
   arr.forEach(person => {
     if (person.name === character) {
-      console.log(person);
+      // console.log(person);
       Object.keys(person).forEach((key, idx) => {
         // console.log(key, idx)
         if (key === 'children') {
