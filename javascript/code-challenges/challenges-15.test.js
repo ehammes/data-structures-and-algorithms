@@ -12,6 +12,8 @@ Write a function named screenForNames that takes in an array of strings and uses
 
 const screenForNames = (arr) => {
   // Solution code here...
+  let reg = /^((Mr)|(Mrs)|(Ms)|(Dr))\.\s[a-zA-Z]+/;
+  return arr.filter(str => reg.test(str));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +27,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 const toTitleCase = (arr) => {
   // Solution code here...
   return arr.map(string => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.substr(1);
   });
   // console.log(arr);
 };
@@ -103,6 +105,15 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
+  const luke = arr.find(char => char.name = 'Luke Skywalker');
+  return arr
+    .filter(char => parseInt(char.mass) > parseInt(luke.mass))
+    .reduce((str, currentChar, i, arr) => {
+      i === arr.length - 1
+        ? str += currentChar.name
+        : str += currentChar.name + ' - ';
+      return str;
+    }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,6 +132,17 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  return arr.sort((a, b) => {
+    const aVal = a[property];
+    const bVal = b[property];
+    if (aVal < bVal) {
+      return -1;
+    } else if (aVal > bVal) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,6 +183,25 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  // let set = [board[0][0], board[1][1], board[2][2]];
+  let check = (set) => {
+
+    return set.every(cell => cell !== '' && cell === set[0])
+      ? true
+      : false;
+  };
+  if (check(board[0])) return true;
+  if (check(board[1])) return true;
+  if (check(board[2])) return true;
+
+  if (check([board[0][0], board[1][0], board[2][0]])) return true;
+  if (check([board[0][1], board[1][1], board[2][1]])) return true;
+  if (check([board[0][2], board[1][2], board[2][2]])) return true;
+
+  if (check([board[0][0], board[1][1], board[2][2]])) return true;
+  if (check([board[0][2], board[1][1], board[2][0]])) return true;
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
