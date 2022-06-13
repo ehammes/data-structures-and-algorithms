@@ -9,4 +9,4 @@ Completed with Katharine Swilley
 
 ## Approach & Efficiency
 
-Our approach was based on today's demo.
+Our approach was based on today's demo using the whiteboard technique to discuss the problem domain, visuals, algorithm, and code.
