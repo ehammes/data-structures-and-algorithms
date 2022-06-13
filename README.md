@@ -22,4 +22,4 @@ To run your tests
 
 Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
-- [Code Challenge Class 01 README](/data-structures-and-algorithms/javascript/cc-01-array-reverse/README)
+- [Code Challenge Class 01 README](/data-structures-and-algorithms/README)
