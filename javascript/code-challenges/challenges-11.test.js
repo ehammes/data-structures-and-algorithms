@@ -155,6 +155,12 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let newString = data.filter(char => {
+    if (char.gender === 'female' || char.gender === 'male')
+      return char;
+  });
+  let name = newString.map(char => char.name);
+  return name.join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -165,8 +171,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
-  //   let shortest = data.filter((a, b) => a.height - b.height);
-  //   console.log(shortest);
+  return data.sort((a,b) => a.height - b.height)[0].name;
 };
 
 // need to find solution that has combo of filter, map, and reduce
