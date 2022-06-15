@@ -4,6 +4,9 @@ Write a function called `insertShiftArray` which takes in an array and a value t
 
 ## Whiteboard Process
 
+Made further updates to function after 6/15 code review:
+![](./img/02-array-insert-shift.jpg)
+
 Completed with Katharine Swilley for the whiteboard. Also discussed the code challenge with Brady Davenport.
 ![](./img/array-insert-shift.jpg)
 
