@@ -24,3 +24,4 @@ Please follow the instructions specific to your 401 language, which can be found
 
 - [Code Challenge Class 01 README](./javascript/cc-01-array-reverse/README.md)
 - [Code Challenge Class 02 README](./javascript/cc-02-array-insert-shift/README.md)
+- [Code Challenge Class 03 README](./javascript/cc-03-array-binary-search/README.md)
