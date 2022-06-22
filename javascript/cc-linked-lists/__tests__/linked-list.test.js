@@ -108,4 +108,58 @@ describe('Testing Linked Lists', () => {
     expect().toBeEqual();
 
   });
+
+  // CC 07
+  // Where k is greater than the length of the linked list
+  test('k is greater than the length of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.kthFromEnd(8);
+    expect().toBeEqual();
+
+  });
+  // Where k and the length of the list are the same
+  test('k = the length of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.kthFromEnd(4);
+    expect().toBeEqual();
+
+  });
+  // Where k is not a positive integer
+  test('k is a negative number', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.kthFromEnd(-2);
+    expect().toBeEqual();
+
+  });
+  // Where the linked list is of a size 1
+  test('the length of the list is 1', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.kthFromEnd(0);
+    expect().toBeEqual();
+
+  });
+  // “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+  test('the node value kth from the end of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.kthFromEnd(2);
+    expect().toBeEqual();
+
+  });
 })

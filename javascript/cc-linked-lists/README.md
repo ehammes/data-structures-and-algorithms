@@ -26,10 +26,20 @@ Write the following methods for the Linked List class:
   * arguments: value, new value
   * adds a new node with the given new value immediately after the first node that has the value specified
 
+### Code07
+
+Write the following method for the Linked List class:
+
+* kth from end
+  * argument: a number, k, as a parameter.
+  * Return the node’s value that is k places from the tail of the linked list.
+  * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
+* CC07: Calculated the length of the linked list, subtracted the length of the list from k, and the returned the value of the node in position k from the head.
 
 ## API
 
-* Uses the following methods: `insert`, `includes`, `toString`
+* Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`
