@@ -18,7 +18,7 @@ describe('Testing Linked Lists', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
     expect().toBeEqual();
-    
+
   });
 
   // The head property will properly point to the first node in the linked list
@@ -60,6 +60,51 @@ describe('Testing Linked Lists', () => {
   test('Properly returns a collection of all the values that exist in the linked list', async () => {
     let linkedList = new LinkedList();
     linkedList.toString(6);
+    expect().toBeEqual();
+
+  });
+
+  // Can successfully add a node to the end of the linked list
+  test('Adds a node to the end of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.append(4);
+    expect().toBeEqual();
+
+  });
+
+  // Can successfully add multiple nodes to the end of a linked list
+  test('Adds multiple nodes to the end of a linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.append(4,5,6);
+    expect().toBeEqual();
+
+  });
+
+  // Can successfully insert a node before a node located i the middle of a linked list
+  test('Inserts a node before a node located i the middle of a linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insertBefore(3, 7);
+    expect().toBeEqual();
+
+  });
+  // Can successfully insert a node before the first node of a linked list
+  test('Inserts a node before the first node of a linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insertBefore(1, 8);
+    expect().toBeEqual();
+
+  });
+  // Can successfully insert after a node in the middle of the linked list
+  test('Inserts after a node in the middle of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insertAfter(4, 6);
+    expect().toBeEqual();
+
+  });
+  // Can successfully insert a node after the last node of the linked list
+  test('Inserts a node after the last node of the linked list', async () => {
+    let linkedList = new LinkedList();
+    linkedList.insertAfter(4, 6);
     expect().toBeEqual();
 
   });
