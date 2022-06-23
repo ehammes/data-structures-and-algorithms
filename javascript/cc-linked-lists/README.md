@@ -35,11 +35,21 @@ Write the following method for the Linked List class:
   * Return the node’s value that is k places from the tail of the linked list.
   * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
+### Code08
+
+* Write a function called zip lists
+* Arguments: 2 linked lists
+* Return: New Linked List, zipped as noted below
+* Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the the zipped list.
+* Try and keep additional space down to O(1)
+* You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
 * CC07: Calculated the length of the linked list, subtracted the length of the list from k, and the returned the value of the node in position k from the head.
+* CC08: Need to revisit approach
 
 ## API
 
-* Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`
+* Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`, `zipLists`

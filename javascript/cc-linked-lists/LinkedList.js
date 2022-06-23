@@ -114,24 +114,59 @@ class LinkedList {
       current = current.next;
     }
   }
+
+  // Code Challenge 08 // Need to Revisit
+  zipLists(linkedList1, linkedList2) {
+    let temp = new Node(0);
+    let currentNode = temp;
+    while (currentNode.next) {
+      if (currentNode.next !== null) {
+        currentNode.next = linkedList1;
+        linkedList1 = linkedList1.next;
+      } else {
+        currentNode.next = linkedList2;
+        linkedList2 = linkedList2.next;
+      }
+      currentNode = currentNode.next;
+    }
+    console.log('return', temp.netxt);
+    return temp.next;
+  }
 }
+
+
+
 
 let linkedList = new LinkedList();
 
-linkedList.insert(1);
-linkedList.insert(2);
-linkedList.insert(3);
-linkedList.insert(4);
-linkedList.insert(5);
-linkedList.includes(5);
-linkedList.includes(2);
-linkedList.includes(6);
-linkedList.toString();
-linkedList.append(10);
-linkedList.append(11);
-linkedList.append(12);
-linkedList.insertBefore(3, 7);
-linkedList.kthFromEnd(5);
-linkedList.traverse();
+// linkedList.insert(1);
+// linkedList.insert(2);
+// linkedList.insert(3);
+// linkedList.insert(4);
+// linkedList.insert(5);
+// linkedList.includes(5);
+// linkedList.includes(2);
+// linkedList.includes(6);
+// linkedList.toString();
+// linkedList.append(10);
+// linkedList.append(11);
+// linkedList.append(12);
+// linkedList.insertBefore(3, 7);
+// linkedList.kthFromEnd(5);
+// linkedList.traverse();
+
+let linkedList1 = new LinkedList();
+let linkedList2 = new LinkedList();
+
+linkedList1.insert(1);
+linkedList1.insert(3);
+linkedList1.insert(2);
+
+linkedList2.insert(5);
+linkedList2.insert(9);
+linkedList2.insert(4);
+
+linkedList.zipLists(linkedList1, linkedList2);
+
 
 module.exports = LinkedList;
