@@ -21,6 +21,7 @@ class LinkedList {
     console.log('done traversing');
   }
 
+  // Code Challenge 05
   // **** INSERT - **** google pre-pending to a linked list - Adds a new node with that value to the head of the list with an O(1) Time performance.
   insert(value) {
     const node = new Node(value);
@@ -61,7 +62,8 @@ class LinkedList {
     return string;
   }
 
-  // append
+  // Code Challenge 06
+  // append / add
   append(value) {
     const node = new Node(value);
     if (!this.head) {
@@ -94,6 +96,24 @@ class LinkedList {
   insertAfter(value, newValue) {
     const node = new Node(value);
   }
+
+  // Code Challenge 07 // Need to revisit
+  kthFromEnd(k) {
+    let counter = 0;
+    let current = this.head;
+    while (current) {
+      current = current.next;
+      counter++;
+      return counter;
+    }
+    console.log(current.next);
+    counter = counter - k;
+    if (current.next === counter) {
+      return current.next.value;
+    } else {
+      current = current.next;
+    }
+  }
 }
 
 let linkedList = new LinkedList();
@@ -101,14 +121,17 @@ let linkedList = new LinkedList();
 linkedList.insert(1);
 linkedList.insert(2);
 linkedList.insert(3);
-linkedList.includes(4);
+linkedList.insert(4);
+linkedList.insert(5);
+linkedList.includes(5);
 linkedList.includes(2);
 linkedList.includes(6);
 linkedList.toString();
-linkedList.append(4);
-linkedList.append(5);
-linkedList.append(6);
+linkedList.append(10);
+linkedList.append(11);
+linkedList.append(12);
 linkedList.insertBefore(3, 7);
+linkedList.kthFromEnd(5);
 linkedList.traverse();
 
 module.exports = LinkedList;
