@@ -24,14 +24,16 @@ class LinkedList {
   // Code Challenge 05
   // **** INSERT - **** google pre-pending to a linked list - Adds a new node with that value to the head of the list with an O(1) Time performance.
   insert(value) {
-    const node = new Node(value);
-    if (!this.head) {
-      this.head = node;
-      return this.head;
-    } else {
-      node.next = this.head;
-      this.head = node;
-    }
+    const newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    // if (!this.head) {
+    //   this.head = node;
+    //   return this.head;
+    // } else {
+    //   node.next = this.head;
+    //   this.head = node;
+    // }
   }
 
   // *** INCLUDES - Indicates whether that value exists as a Node’s value somewhere within the list.
@@ -57,10 +59,21 @@ class LinkedList {
     while (currentNode) {
       string += '{ ' + currentNode.value + ' }' + ' -> ';
       currentNode = currentNode.next;
-      console.log(string);
     }
+    string += 'NULL';
+    // console.log('string:', string);
     return string;
   }
+
+  //toString() {
+  // let currentNode = this.head;
+  // let result == '';
+  // while(current){
+  // result += `{ ${currenNode.value} } => `;
+  // }
+  // result += 'NULL`;
+  // return result
+  //}
 
   // Code Challenge 06
   // append / add
@@ -139,15 +152,16 @@ class LinkedList {
 
 let linkedList = new LinkedList();
 
-// linkedList.insert(1);
-// linkedList.insert(2);
-// linkedList.insert(3);
-// linkedList.insert(4);
-// linkedList.insert(5);
+linkedList.insert(1);
+linkedList.insert(2);
+linkedList.insert(3);
+linkedList.insert(4);
+linkedList.insert(5);
 // linkedList.includes(5);
 // linkedList.includes(2);
 // linkedList.includes(6);
-// linkedList.toString();
+let result = linkedList.toString();
+console.log('string:', result);
 // linkedList.append(10);
 // linkedList.append(11);
 // linkedList.append(12);
@@ -169,4 +183,7 @@ linkedList2.insert(4);
 linkedList.zipLists(linkedList1, linkedList2);
 
 
-module.exports = LinkedList;
+module.exports = {
+  Node,
+  LinkedList,
+};

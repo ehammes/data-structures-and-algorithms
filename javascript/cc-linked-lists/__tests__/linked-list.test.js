@@ -1,63 +1,68 @@
 'use strict';
 
-const supertest = require('supertest');
-const LinkedList = require('../LinkedList');
+const { Node, LinkedList } = require('../LinkedList');
+
 
 /// REVISIT TESTS
+
+let linkedList = new LinkedList();
+
 describe('Testing Linked Lists', () => {
 
   // Can successfully instantiate an empty linked list
-  test('Successfully instantiates an empty linked list', async () => {
-    let linkedList = new LinkedList();
-    linkedList();
+  test('Successfully instantiates an empty linked list', () => {
+
+    expect(linkedList.head).toBeNull();
+    expect(linkedList.head).toBeFalsy();
 
   });
 
   // Can properly insert into the linked list
-  test('Properly inserts into the linked list', async () => {
-    let linkedList = new LinkedList();
+  test('Properly inserts into the linked list', () => {
     linkedList.insert(1);
-    expect().toBeEqual();
+
+    expect(linkedList.head.value).toEqual(1);
+    expect(linkedList.head.next).toBeNull();
 
   });
 
   // The head property will properly point to the first node in the linked list
-  test('The head property properly points to the first node in the linked list', async () => {
+  test('The head property properly points to the first node in the linked list', () => {
     let linkedList = new LinkedList();
 
   });
 
   // Can properly insert multiple nodes into the linked list
-  test('Properly inserts multiple nodes into the linked list', async () => {
-    let linkedList = new LinkedList();
-    linkedList.insert(1);
+  test('Properly inserts multiple nodes into the linked list', () => {
     linkedList.insert(2);
     linkedList.insert(3);
-    expect().toBeEqual();
-    expect().toBeEqual();
-    expect().toBeEqual();
+    linkedList.insert(4);
+
+    expect(linkedList.head.value).toEqual(4);
+    expect(linkedList.head.next.value).toEqual(3);
+    expect(linkedList.head.next.next.value).toEqual(2);
+    expect(linkedList.head.next.next.next.value).toEqual(1);
+    expect(linkedList.head.next.next.next.next).toBeNull();
   });
 
   // Will return true when finding a value within the linked list that exists
-  test('Returns true when finding a value within the linked list that exists', async () => {
-    let linkedList = new LinkedList();
-    linkedList.insert(1);
-    linkedList.includes(1);
-    expect().toBeEqual(true);
+  test('Returns true when finding a value within the linked list that exists', () => {
+    let result = linkedList.includes(1);
+
+    expect(result).toBeTruthy();
 
   });
 
   // Will return false when searching for a value in the linked list that does not exist
-  test('Returns false when searching for a value in the linked list that does not exist', async () => {
-    let linkedList = new LinkedList();
-    linkedList.insert(1);
-    linkedList.includes(6);
-    expect().toBeEqual(false);
+  test('Returns false when searching for a value in the linked list that does not exist', () => {
+    let anotherResult = linkedList.includes('not included');
+
+    expect(anotherResult).toBeFalsy();
 
   });
 
   // Can properly return a collection of all the values that exist in the linked list
-  test('Properly returns a collection of all the values that exist in the linked list', async () => {
+  test('Properly returns a collection of all the values that exist in the linked list', () => {
     let linkedList = new LinkedList();
     linkedList.toString(6);
     expect().toBeEqual();
