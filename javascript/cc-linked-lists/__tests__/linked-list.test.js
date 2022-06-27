@@ -75,7 +75,7 @@ describe('Testing Linked Lists', () => {
   // Can successfully add multiple nodes to the end of a linked list
   test('Adds multiple nodes to the end of a linked list', async () => {
     let linkedList = new LinkedList();
-    linkedList.append(4,5,6);
+    linkedList.append(4, 5, 6);
     expect().toBeEqual();
 
   });
@@ -109,7 +109,9 @@ describe('Testing Linked Lists', () => {
 
   });
 
+
   // CC 07
+
   // Where k is greater than the length of the linked list
   test('k is greater than the length of the linked list', async () => {
     let linkedList = new LinkedList();
@@ -162,4 +164,22 @@ describe('Testing Linked Lists', () => {
     expect().toBeEqual();
 
   });
+
+  // CC 08
+
+  // Where 2 linked lists zip together into 1 linked list
+  test('the length of the list is 1', async () => {
+    let linkedList1 = new LinkedList();
+    linkedList1.insert(1);
+    linkedList1.insert(3);
+    linkedList1.insert(2);
+    let linkedList2 = new LinkedList();
+    linkedList2.insert(5);
+    linkedList2.insert(9);
+    linkedList2.insert(4);
+    expect().text('{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> null')
+
+  });
+
+
 })
