@@ -145,9 +145,8 @@ class LinkedList {
     console.log('return', temp.netxt);
     return temp.next;
   }
+
 }
-
-
 
 
 let linkedList = new LinkedList();
@@ -181,7 +180,6 @@ linkedList2.insert(9);
 linkedList2.insert(4);
 
 linkedList.zipLists(linkedList1, linkedList2);
-
 
 module.exports = {
   Node,

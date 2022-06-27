@@ -44,12 +44,54 @@ Write the following method for the Linked List class:
 * Try and keep additional space down to O(1)
 * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
+### Code10
+
+Stack
+* Create a Stack class that has a top property. It creates an empty Stack when instantiated.
+* This object should be aware of a default empty value assigned to top when the stack is created.
+* The class should contain the following methods:
+  * push
+    * Arguments: value
+    * adds a new node with that value to the top of the stack with an O(1) Time performance.
+  * pop
+    * Arguments: none
+    * Returns: the value from node from the top of the stack
+    * Removes the node from the top of the stack
+    * Should raise exception when called on empty stack
+  * peek
+    * Arguments: none
+    * Returns: Value of the node located at the top of the stack
+    * Should raise exception when called on empty stack
+  * is empty
+    * Arguments: none
+    * Returns: Boolean indicating whether or not the stack is empty.
+* Queue
+  * Create a Queue class that has a front property. It creates an empty Queue when instantiated.
+  * This object should be aware of a default empty value assigned to front when the queue is created.
+  * The class should contain the following methods:
+  * enqueue
+    * Arguments: value
+    * adds a new node with that value to the back of the queue with an O(1) Time performance.
+  * dequeue
+    * Arguments: none
+    * Returns: the value from node from the front of the queue
+    * Removes the node from the front of the queue
+    * Should raise exception when called on empty queue
+  * peek
+    * Arguments: none
+    * Returns: Value of the node located at the front of the queue
+    * Should raise exception when called on empty stack
+  * is empty
+    * Arguments: none
+    * Returns: Boolean indicating whether or not the queue is empty
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
 * CC07: Calculated the length of the linked list, subtracted the length of the list from k, and the returned the value of the node in position k from the head.
 * CC08: Need to revisit approach
+* CC10: Based on learnings from lecture
 
 ## API
 
-* Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`, `zipLists`
+* Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`, `zipLists`, `push`, `pop`, `peek`, `isEmpty`, `enqueue`, `dequeue`
