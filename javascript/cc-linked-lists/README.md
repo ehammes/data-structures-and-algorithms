@@ -85,13 +85,25 @@ Stack
     * Arguments: none
     * Returns: Boolean indicating whether or not the queue is empty
 
+### Code11
+
+* Create a new class called pseudo queue
+* Methods:
+  * `enqueue`
+    * Arguments: value
+    * Inserts value into the PseudoQueue, using a first-in, first-out approach.
+  * `dequeue`
+    * Arguments: none
+    * Extracts a value from the PseudoQueue, using a first-in, first-out approach.
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
 * CC07: Calculated the length of the linked list, subtracted the length of the list from k, and the returned the value of the node in position k from the head.
 * CC08: Need to revisit approach
 * CC10: Based on learnings from lecture
+* CC11: Based on learnings from lecture and demo code
 
-## API
+## Methods
 
 * Uses the following methods: `insert`, `includes`, `toString`, `append`, `insertBefore`, `insertAfter`, `kthFromEnd`, `zipLists`, `push`, `pop`, `peek`, `isEmpty`, `enqueue`, `dequeue`
