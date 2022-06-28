@@ -2,13 +2,6 @@
 
 const { Stack } = require('./stack-and-queue'); // access to push, pop, peek
 
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
-
 class PseudoQueue {
   constructor() {
     this.stackOne = new Stack();
@@ -17,23 +10,29 @@ class PseudoQueue {
   }
 
   enqueue(value) {
-    let newNode = new Node(value);
-    if (this.stackOne && this.stackTwo === null) {
+    if (this.stackOne.isEmpty() && this.stackTwo.empty) {
+      let newNode = newNode(value);
       this.stackOne.push(newNode);
-    } else if (this.stackTwo === null) {
-      this.stackTwo.push(newNode);
-      // } else if (this.stackOne === null)
-      // ??
+    } else if (this.stackTwo.empty) {
+      let newNode = newNode(value);
+      this.stackOne.push(newNode);
+    } else if (this.stackTwo.isEmpty() && !this.stackTwo.empty) {
+      while (!this.stackTwo.empty) {
+        this.stackOne.push(this.stackTwo.pop());
+      }
+      let newNode = newNode(value);
+      this.input.push(newNode);
     }
   }
 
-  dequeue(value) {
-    let newNode = new Node(value);
-    if (this.stackOne && this.stackTwo === null) {
-      console.log('error');
-    } else if (this.stackTwo === null) {
-      this.stackOne.pop(this.top);
-      this.stackTwo.push(newNode);
+  dequeue() {
+    if (this.stackTwo.empty) {
+      while (!this.stackOne.isEmpty()){
+        this.stackTwo.push(this.stackOne.pop());
+      }
+      return this.stackTwo.pop();
+    } else {
+      return this.stackTwo.pop();
     }
   }
 }
