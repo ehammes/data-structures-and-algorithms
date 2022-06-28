@@ -1,7 +1,9 @@
 'use strict';
 
 const { Stack, Queue } = require('../stack-and-queue.js');
+const { PseudoQueue } = require('../stack-queue-pseudo');
 
+//CC 10
 describe('Tests for Stack', () => {
   test('Can successfully push onto a stack', () => {
     let stack = new Stack();
@@ -120,4 +122,28 @@ describe('Tests for Stack', () => {
 
     expect().toEqual();
   });
-})
+});
+
+
+//CC 11
+describe('Tests for pseudo queue', () => {
+  test('Can successfully enqueue onto a stack', () => {
+    let queue = new PseudoQueue();
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+
+    expect(queue.top.value).toEqual(3);
+    expect(queue.top.next.value).toEqual(2);
+    expect(queue.top.next.next.value).toEqual(1);
+  });
+
+  test('Can successfully dequeue from a stack', () => {
+    let queue = new PseudoQueue();
+    queue.dequeue(8);
+    queue.dequeue(9);
+
+    expect(queue.top.value).toBeNull();
+  });
+
+});
