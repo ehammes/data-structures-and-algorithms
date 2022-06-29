@@ -47,6 +47,7 @@ Write the following method for the Linked List class:
 ### Code10
 
 Stack
+
 * Create a Stack class that has a top property. It creates an empty Stack when instantiated.
 * This object should be aware of a default empty value assigned to top when the stack is created.
 * The class should contain the following methods:
@@ -96,6 +97,20 @@ Stack
     * Arguments: none
     * Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
+### Code12
+
+* Create a class called `AnimalShelter` which holds only dogs and cats.
+* The shelter operates using a first-in, first-out approach.
+* Methods:
+  * `enqueue`
+    * Arguments: animal
+      * animal can be either a dog or a cat object.
+  * `dequeue`
+    * Arguments: pref
+      * pref can be either "dog" or "cat"
+    * Return: either a dog or a cat, based on preference.
+      * If pref is not "dog" or "cat" then return null
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
@@ -103,6 +118,7 @@ Stack
 * CC08: Need to revisit approach
 * CC10: Based on learnings from lecture
 * CC11: Based on learnings from lecture and demo code
+* CC12: Based on learnings from lecture and demo code. Two queues: dog and cat.
 
 ## Methods
 

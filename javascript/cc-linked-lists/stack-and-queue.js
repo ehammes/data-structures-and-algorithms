@@ -69,12 +69,6 @@ class Queue {
   }
 }
 
-// Code Challenge 11
-
-
-
-
-
 
 let stack = new Stack();
 stack.push(1);

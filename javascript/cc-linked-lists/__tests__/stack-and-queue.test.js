@@ -2,6 +2,7 @@
 
 const { Stack, Queue } = require('../stack-and-queue.js');
 const { PseudoQueue } = require('../stack-queue-pseudo');
+const { AnimalShelter } = require('../stack-queue-animal-shelter');
 
 //CC 10
 describe('Tests for Stack', () => {
@@ -145,5 +146,38 @@ describe('Tests for pseudo queue', () => {
 
     expect(queue.top.value).toBeNull();
   });
+});
 
+
+//CC 12
+describe('Tests for animal shelter queue', () => {
+  test('Can successfully enqueue dog queue', () => {
+    let dogQueue = new AnimalShelter();
+    dogQueue.enqueue('dog');
+
+    expect(dogQueue.front.value).toEqual('dog');
+    expect(dogQueue.back.value).toBeNull();
+  });
+
+  test('Can successfully enqueue cat queue', () => {
+    let catQueue = new AnimalShelter();
+    catQueue.enqueue('cat');
+
+    expect(catQueue.front.value).toEqual('cat');
+    expect(catQueue.back.value).toBeNull();
+  });
+
+  test('Can successfully dequeue dog queue', () => {
+    let dogQueue = new AnimalShelter();
+    dogQueue.dequeue('dog');
+
+    expect(dogQueue.front.value).toBeNull();
+  });
+
+  test('Can successfully dequeue cat queue', () => {
+    let catQueue = new AnimalShelter();
+    catQueue.dequeue('cat');
+
+    expect(catQueue.front.value).toBeNull();
+  });
 });
