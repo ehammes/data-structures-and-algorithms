@@ -27,13 +27,6 @@ class LinkedList {
     const newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
-    // if (!this.head) {
-    //   this.head = node;
-    //   return this.head;
-    // } else {
-    //   node.next = this.head;
-    //   this.head = node;
-    // }
   }
 
   // *** INCLUDES - Indicates whether that value exists as a Node’s value somewhere within the list.
@@ -64,16 +57,6 @@ class LinkedList {
     // console.log('string:', string);
     return string;
   }
-
-  //toString() {
-  // let currentNode = this.head;
-  // let result == '';
-  // while(current){
-  // result += `{ ${currenNode.value} } => `;
-  // }
-  // result += 'NULL`;
-  // return result
-  //}
 
   // Code Challenge 06
   // append / add
