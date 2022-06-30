@@ -1,10 +1,8 @@
-# Singly Linked List
-
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+# Code Challenges Code401
 
 ## Challenges
 
-### Code05
+### Code 05
 
 * Create a Linked List class
 * Within your Linked List class, include a head property.
@@ -12,7 +10,7 @@ Create a Node class that has properties for the value stored in the Node, and a 
 * The class should contain the following methods: `insert`, `includes`, `toString`
 * Write tests to prove the functionality
 
-### Code06
+### Code 06
 
 Write the following methods for the Linked List class:
 
@@ -26,7 +24,7 @@ Write the following methods for the Linked List class:
   * arguments: value, new value
   * adds a new node with the given new value immediately after the first node that has the value specified
 
-### Code07
+### Code 07
 
 Write the following method for the Linked List class:
 
@@ -35,7 +33,7 @@ Write the following method for the Linked List class:
   * Return the node’s value that is k places from the tail of the linked list.
   * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-### Code08
+### Code 08
 
 * Write a function called zip lists
 * Arguments: 2 linked lists
@@ -44,7 +42,7 @@ Write the following method for the Linked List class:
 * Try and keep additional space down to O(1)
 * You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
-### Code10
+### Code 10
 
 Stack
 
@@ -86,7 +84,7 @@ Stack
     * Arguments: none
     * Returns: Boolean indicating whether or not the queue is empty
 
-### Code11
+### Code 11
 
 * Create a new class called pseudo queue
 * Methods:
@@ -97,7 +95,7 @@ Stack
     * Arguments: none
     * Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
-### Code12
+### Code 12
 
 * Create a class called `AnimalShelter` which holds only dogs and cats.
 * The shelter operates using a first-in, first-out approach.
@@ -111,6 +109,13 @@ Stack
     * Return: either a dog or a cat, based on preference.
       * If pref is not "dog" or "cat" then return null
 
+### Code 13
+
+* Write a function called validate brackets
+* Arguments: string
+* Return: boolean
+  * representing whether or not the brackets in the string are balanced
+
 ## Approach & Efficiency
 
 * CC05, CC06: I worked on this challenge by reviewing the lecture, my notes, and testing via console logs. The class is inserted with nodes at an O(1) Time performance.
@@ -119,6 +124,7 @@ Stack
 * CC10: Based on learnings from lecture
 * CC11: Based on learnings from lecture and demo code
 * CC12: Based on learnings from lecture and demo code. Two queues: dog and cat.
+* CC13: Based on learnings from review.
 
 ## Methods
 

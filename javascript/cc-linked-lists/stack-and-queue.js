@@ -21,9 +21,11 @@ class Stack {
   }
 
   pop() {
-    let node = this.top;
-    this.top = node.next;
-    return node;
+    if (this.top !==null) {
+      let node = this.top;
+      this.top = node.next;
+      return node;
+    }
   }
 
   peek() {
