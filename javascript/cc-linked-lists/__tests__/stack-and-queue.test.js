@@ -3,6 +3,7 @@
 const { Stack, Queue } = require('../stack-and-queue.js');
 const { PseudoQueue } = require('../stack-queue-pseudo');
 const { AnimalShelter } = require('../stack-queue-animal-shelter');
+const validate = require('../stack-queue-brackets');
 
 //CC 10
 describe('Tests for Stack', () => {
@@ -180,4 +181,20 @@ describe('Tests for animal shelter queue', () => {
 
     expect(catQueue.front.value).toBeNull();
   });
+});
+
+//CC 12
+describe('Tests stack queue brackets', () => {
+  test('returns TRUE if brackets are balanced in string', () => {
+    let bracket = validate('{[]}');
+
+    expect(bracket).toBeTruthy();
+  });
+
+  test('returns FALSE if brackets are balanced in string', () => {
+    let bracket = validate('{[}]');
+
+    expect(bracket).toBeFalsy();
+  });
+
 });
