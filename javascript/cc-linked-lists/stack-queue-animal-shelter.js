@@ -1,4 +1,4 @@
-const { Queue } = require("./stack-and-queue");
+const { Queue } = require('./stack-and-queue');
 
 class AnimalShelter {
   constructor() {
