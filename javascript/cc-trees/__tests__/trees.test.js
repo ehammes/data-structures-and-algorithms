@@ -97,9 +97,27 @@ describe('Tests for Trees', () => {
 
   });
 
+  // CC 16
+  test('Returns the max value of a Binary Tree', () => {
+    let tree = new BinaryTree();
+    tree.root = new Node(12);
+    tree.root.left = new Node(4);
+    tree.root.right = new Node(17);
+    tree.root.left.left = new Node(2);
+    tree.root.left.right = new Node(9);
+    tree.root.right.right = new Node(22);
+    let maxValue = tree.getMaxValue();
+
+    expect(maxValue).toEqual(22);
+
+  });
+
+  test('Returns null if the Binary Tree doesn\t contain any nodes when locating max value', () => {
+    let tree = new BinaryTree();
+    let maxValue = tree.getMaxValue();
+
+    expect(maxValue).toBeNull();
+
+  });
+
 });
-
-
-
-// For a Binary Search Tree, can successfully add a left child and right child properly to a node
-// Returns true	false for the contains method, given an existing or non-existing node value

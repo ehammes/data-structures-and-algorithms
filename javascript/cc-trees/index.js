@@ -57,6 +57,25 @@ class BinaryTree {
     return newArr;
   }
 
+  // CC16
+  getMaxValue() {
+    if (this.root === null ) {
+      return null;
+    } else {
+      let maxValue = this.root.value;
+      let currentNode = this.root;
+      const traverse = node => {
+        if (node.value > maxValue) {
+          maxValue = node.value;
+        }
+        if (node.left) traverse(node.left);
+        if (node.right) traverse(node.right);
+      };
+      traverse(currentNode);
+      return maxValue;
+    }
+  }
+
 }
 
 
@@ -66,25 +85,25 @@ class BinarySearchTree extends BinaryTree {
     this.root = null;
   }
 
-  add(value){
+  add(value) {
     let newNode = new Node(value);
-    if(this.root === null){
+    if (this.root === null) {
       this.root = newNode;
     }
-    if (newNode < this.root){
+    if (newNode < this.root) {
       this.node.left = newNode;
-    } else if (newNode > this.root.value){
+    } else if (newNode > this.root.value) {
       this.node.right = newNode;
     }
   }
 
-  contains(value){
-    if(this.root === null){
+  contains(value) {
+    if (this.root === null) {
       return false;
     }
     if (value < this.root) {
       value = this.root.left;
-    } else if (value > this.root){
+    } else if (value > this.root) {
       value = this.root.right;
     }
     if (value) return true;
@@ -104,18 +123,21 @@ tree.root.right.right = new Node(22);
 let preOrder = tree.preOrder();
 let inOrder = tree.inOrder();
 let postOrder = tree.postOrder();
+let maxValue = tree.getMaxValue();
 
 console.log('preorder:', preOrder);
 console.log('inOrder:', inOrder);
 console.log('postOrder:', postOrder);
+console.log('maxValue:', maxValue);
 
-let binarySearchTree = new BinarySearchTree();
-binarySearchTree.root = new Node(12);
-let add = binarySearchTree.add(2);
-let contains = binarySearchTree.contains(2);
 
-console.log('add:', add);
-console.log('contains:', contains);
+// let binarySearchTree = new BinarySearchTree();
+// binarySearchTree.root = new Node(12);
+// let add = binarySearchTree.add(2);
+// let contains = binarySearchTree.contains(2);
+
+// console.log('add:', add);
+// console.log('contains:', contains);
 
 
 
