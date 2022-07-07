@@ -1,6 +1,6 @@
 'use strict';
 
-const { BinaryTree, Node, BinarySearchTree } = require('../index');
+const { BinaryTree, Node, BinarySearchTree, breadthFirst } = require('../index');
 
 //CC 15
 describe('Tests for Trees', () => {
@@ -117,6 +117,23 @@ describe('Tests for Trees', () => {
     let maxValue = tree.getMaxValue();
 
     expect(maxValue).toBeNull();
+
+  });
+
+  // CC 17
+
+  test('Returns the breadth first array of a binary tree', () => {
+    let tree = new BinaryTree();
+    tree.root = new Node(12);
+    tree.root.left = new Node(4);
+    tree.root.right = new Node(17);
+    tree.root.left.left = new Node(2);
+    tree.root.left.right = new Node(9);
+    tree.root.right.left = new Node(14);
+    tree.root.right.right = new Node(22);
+    let breadthF = breadthFirst(tree);
+
+    expect(breadthF).toEqual([12, 4, 17, 2, 9, 14, 22]);
 
   });
 
