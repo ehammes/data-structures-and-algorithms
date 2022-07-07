@@ -59,7 +59,7 @@ class BinaryTree {
 
   // CC16
   getMaxValue() {
-    if (this.root === null ) {
+    if (this.root === null) {
       return null;
     } else {
       let maxValue = this.root.value;
@@ -75,7 +75,6 @@ class BinaryTree {
       return maxValue;
     }
   }
-
 }
 
 
@@ -112,23 +111,41 @@ class BinarySearchTree extends BinaryTree {
 
 }
 
+// CC17 - revisit
+function breadthFirst(tree) {
+  let newQueue = [];
+  let results = [];
+  let currentNode = tree.root;
+  newQueue.push(currentNode);
+  while (newQueue !== null) {
+    currentNode = newQueue.shift(currentNode);
+    results.push(currentNode);
+    if (currentNode.left) { newQueue.push(currentNode.left); }
+    if (currentNode.right) { newQueue.push(currentNode.right); }
+  }
+  return results;
+}
+
 let tree = new BinaryTree();
 tree.root = new Node(12);
 tree.root.left = new Node(4);
 tree.root.right = new Node(17);
 tree.root.left.left = new Node(2);
 tree.root.left.right = new Node(9);
+tree.root.right.left = new Node(14);
 tree.root.right.right = new Node(22);
 
-let preOrder = tree.preOrder();
-let inOrder = tree.inOrder();
-let postOrder = tree.postOrder();
-let maxValue = tree.getMaxValue();
+// let preOrder = tree.preOrder();
+// let inOrder = tree.inOrder();
+// let postOrder = tree.postOrder();
+// let maxValue = tree.getMaxValue();
+let breadthF = breadthFirst(tree);
 
-console.log('preorder:', preOrder);
-console.log('inOrder:', inOrder);
-console.log('postOrder:', postOrder);
-console.log('maxValue:', maxValue);
+// console.log('preorder:', preOrder);
+// console.log('inOrder:', inOrder);
+// console.log('postOrder:', postOrder);
+// console.log('maxValue:', maxValue);
+console.log('breadthFirst:', breadthF);
 
 
 // let binarySearchTree = new BinarySearchTree();
@@ -144,5 +161,6 @@ console.log('maxValue:', maxValue);
 module.exports = {
   BinaryTree,
   Node,
-  BinarySearchTree
+  BinarySearchTree,
+  breadthFirst
 };
