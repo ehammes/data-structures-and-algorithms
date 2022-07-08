@@ -49,4 +49,4 @@
 ## Methods
 
 * Uses the following methods: `preorder`, `inOrder`, `postOrder`, `add`, `contains`
-* Functions: `breadthFirst();`
+* Functions: `breadthFirst();`, `fizzBuzzTree();`
