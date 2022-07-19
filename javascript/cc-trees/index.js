@@ -126,6 +126,20 @@ function breadthFirst(tree) {
   return results;
 }
 
+// CC 18
+function fizzBuzzTree(tree){
+  const traverse = node => {
+    if (node.value % 3 === 0) { node.value = 'Fizz'; }
+    if (node.value % 5 === 0) { node.value = 'Buzz'; }
+    if (node.value % 3 === 0 && node.value % 5 === 0 ) { node.value = 'FizzBuzz'; }
+    if (node.value % 3 !== 0 || node.value % 5 !== 0 ) { node.value.toString(); }
+    if (node.left) traverse(node.left);
+    if (node.right) traverse(node.right);
+  };
+  traverse(tree.root);
+  return tree;
+}
+
 let tree = new BinaryTree();
 tree.root = new Node(12);
 tree.root.left = new Node(4);
@@ -139,13 +153,16 @@ tree.root.right.right = new Node(22);
 // let inOrder = tree.inOrder();
 // let postOrder = tree.postOrder();
 // let maxValue = tree.getMaxValue();
-let breadthF = breadthFirst(tree);
+// let breadthF = breadthFirst(tree);
+let fbt = fizzBuzzTree(tree);
 
 // console.log('preorder:', preOrder);
 // console.log('inOrder:', inOrder);
 // console.log('postOrder:', postOrder);
 // console.log('maxValue:', maxValue);
-console.log('breadthFirst:', breadthF);
+// console.log('breadthFirst:', breadthF);
+console.log('fizzBuzzTree:', fbt);
+
 
 
 // let binarySearchTree = new BinarySearchTree();
@@ -162,5 +179,6 @@ module.exports = {
   BinaryTree,
   Node,
   BinarySearchTree,
-  breadthFirst
+  breadthFirst,
+  fizzBuzzTree
 };
