@@ -1,4 +1,4 @@
-# Blog Notes: 
+# Blog Notes:
 
 ## Insertion Sort CC 26
 
