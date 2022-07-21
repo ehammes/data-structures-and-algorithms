@@ -55,6 +55,7 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 
 ### CC 28 Post:
 
+The approach I took for quickSort, breaks down into left and right arrays and pushes values from the array into left and right based on comparing each value to the pivot. It then continues to break down into left and right arrays until each value is sorted and then returns the new sorted array.
 
 ![visual](./public/img/cc-28.jpg)
 
