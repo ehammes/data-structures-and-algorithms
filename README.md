@@ -27,3 +27,4 @@ Please follow the instructions specific to your 401 language, which can be found
 - [Code Challenge Class 03 README](./javascript/cc-03-array-binary-search/README.md)
 - [Code Challenge Sorting - Insertion CC26](./sorting/insertion/README.md)
 - [Code Challenge Sorting - Merge CC27](./sorting/merge/README.md)
+- [Code Challenge Sorting - Quick CC28](./sorting/quick/README.md)

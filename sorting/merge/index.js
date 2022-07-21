@@ -4,12 +4,12 @@
 function mergeSort(arr) {
   let n = arr.length;
   if ( n > 1) {
-    let mid = n / 2;
-    let left = [];
+    let mid = n / 2; // add Math.floor
+    let left = []; // items.slice(0, middle)
     for (let i = 0; i < mid; i++){
       left.push(arr[i]);
     }
-    let right = [];
+    let right = []; // items.slice(middle)
     for (let i = mid; i < n; i++){
       right.push(arr[i]);
     }
